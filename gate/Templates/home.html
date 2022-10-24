@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+
+    <article class="media content-section">
+        <div class="media-body">
+        <h2><a class="article-title" href="#">Exam Highlights</a></h2>
+        <p class="article-content">
+            <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>Particulars</th>
+                        <th>Details</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Full Form</td>
+                        <td>Graduate Aptitude Test in Engineering</td>
+                    </tr>
+                    <tr>
+                        <td>Organising Body</td>
+                        <td>IIT Kanpur</td>
+                    </tr>
+                    <tr>
+                        <td>Mode of Application</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td>Mode of Examination</td>
+                        <td>Computer-based Test (Online)</td>
+                    </tr>
+                    <tr>
+                        <td>Exam Frequency</td>
+                        <td>Once a year</td>
+                    </tr>
+                    <tr>
+                        <td>Exam Duration</td>
+                        <td>3 hours (180 minutes)</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Subject Papers</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Questions</td>
+                        <td>10 (General Aptitude) + 55 (Subject)= 65 </td>
+                    </tr>
+                    <tbody>
+                </table>
+            </div>
+        </p>
+        </div>
+    </article>
+
+
+    <article class="media content-section">
+        <div class="media-body">
+        <h2><a class="article-title" href="#">GATE Timeline</a></h2>
+        <p class="article-content">
+            <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Online Application Process Opens</td>
+                        <td>30th August, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Closing Date of REGULAR registration</td>
+                        <td>7th October, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Closing Date of EXTENDED registration</td>
+                        <td>16th October, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Modifications in GATE 2023 Application</td>
+                        <td>4th to 11th November, 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Availability of GATE Admit cards</td>
+                        <td>3rd January, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>GATE 2023 Examinations</td>
+                        <td>4th, 5th and 11th, 12th February, 2023</td>
+                    </tr>
+                    <tbody>
+                </table>
+            </div>
+        </p>
+        </div>
+    </article>
+
+
+    <article class="media content-section">
+        <div class="media-body">
+        <h2><a class="article-title" href="#">GATE Resources</a></h2>
+        <p class="article-content">
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCnaOzPCUym-vNapCjV2p9Pg">GATE Academy</a></li>
+                <li><a href="https://www.youtube.com/c/nesoacademy">Neso Academy</a></li>
+                <li><a href="https://www.youtube.com/c/GateSmashers">GATE Smashers</a></li>
+            </ul>
+        </p>
+        </div>
+    </article>
+{% endblock %}

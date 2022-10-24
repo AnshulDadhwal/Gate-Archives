@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./
+    container_name: flask
+    restart: unless-stopped
+    environment:
+      - APP_NAME=MyFlaskApp
+      - DB_USERNAME=example
+    expose:
+      - "5001"
+    networks:
+      - mynet
+
+  nginx:
+    depends_on:
+      - flask
+    build:
+     context: ./nginx/
+     dockerfile: Dockerfile
+    container_name: mynginx
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./gate:/var/www/html
+      - ./app.ini:/etc/nginx/conf.d/default.conf
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
