@@ -11,8 +11,6 @@ The website is still unfinished and I am open to contributions for adding featur
 I have tried to containerize the flask web application using uWSGI acting as a socket for calling a callable project Flask and connect it with Nginx server for deployment.
 This website takes inspiration from Corey Schafer's Flask Tutorial series where he created a blog post website from scratch.
 
-<>
-
 ## Deployment
 
 To deploy this project run follow these steps:
